@@ -1,0 +1,127 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.5",
+        "anaseqal/nova-import": "^0.0.6",
+        "beyondcode/nova-tinker-tool": "^1.1",
+        "cartalyst/tags": "^10.0",
+        "chelout/laravel-relationship-events": "^1.4",
+        "codebykyle/calculated-field": "^1.1",
+        "codexshaper/laravel-woocommerce": "^2.6",
+        "den1n/nova-queues": "^1.1",
+        "digital-creative/nova-range-input-filter": "^0.1.5",
+        "dillingham/nova-button": "^1.0",
+        "ebess/advanced-nova-media-library": "^3.1",
+        "eminiarts/nova-permissions": "^1.0",
+        "exolnet/laravel-sqlite-fluent-drop-foreign": "^1.2",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "jeffbeltran/sanctum-tokens": "^1.5",
+        "jenssegers/imagehash": "^0.8.0",
+        "kirschbaum-development/nova-inline-relationship": "^0.3.0",
+        "kub-at/php-simple-html-dom-parser": "^1.9",
+        "laravel/framework": "^7.0",
+        "laravel/nova": "*",
+        "laravel/sanctum": "^2.9",
+        "laravel/telescope": "^3.3",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.0",
+        "laraveles/spanish": "^1.4",
+        "league/flysystem-aws-s3-v3": "~1",
+        "maatwebsite/excel": "^3.1",
+        "maatwebsite/laravel-nova-excel": "^1.2",
+        "mirovit/nova-notifications": "^1.0",
+        "mydnic/laravel-kustomer": "^1.5",
+        "oleksiypetlyuk/nova-range-filter": "^0.0.2",
+        "optimistdigital/nova-settings": "^3.1",
+        "orlyapps/nova-multiline-text": "^0.0.1",
+        "outhebox/nova-hidden-field": "^1.0",
+        "owenmelbz/nova-radio-field": "^1.0",
+        "palauaandsons/nova-tags-field": "^3.0",
+        "pusher/pusher-php-server": "~4.0",
+        "reedware/nova-text-filter": "^1.0",
+        "saumini/count": "^1.0",
+        "sentry/sentry-laravel": "^2.6",
+        "signifly/nova-progressbar-field": "^0.0.2",
+        "silvanite/novafieldcheckboxes": "^1.2",
+        "sixlive/nova-text-copy-field": "^1.5",
+        "sloveniangooner/searchable-select": "^1.3",
+        "spatie/laravel-medialibrary": "^8.2",
+        "spatie/nova-backup-tool": "^4.0",
+        "spatie/valuestore": "^1.2",
+        "titasgailius/search-relations": "^1.0",
+        "weidner/goutte": "^1.5",
+        "yassi/nova-nested-form": "^3.0",
+        "ziffmedia/nova-select-plus": "^1.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.3",
+        "facade/ignition": "^2.0",
+        "fzaninotto/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": " ^5.4.0|^6.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "palauaandsons/nova-tags-field"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        },{
+            "type": "vcs",
+            "url": "https://github.com/o1y/nova-inline-relationship"
+        }
+    ]
+}

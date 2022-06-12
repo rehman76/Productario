@@ -1,0 +1,7 @@
+VBGROUP 5.0
+Project=getGrupoNucleo.vbp
+Project=getElit.vbp
+Project=setWooCommerce.vbp
+Project=getIntercap.vbp
+Project=getStylus.vbp
+StartupProject=getElit_API.vbp
